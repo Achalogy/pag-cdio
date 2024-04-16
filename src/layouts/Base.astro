@@ -48,17 +48,20 @@ const themeCookie = Astro.cookies.get("theme")?.value ?? "light";
           }
         </script>
         <div
-          class="absolute w-full top-0 left-0 select-none h-20 items-center flex justify-between px-[5%] text-black"
+          class="absolute w-full top-0 left-0 select-none h-20 items-center flex justify-between px-[5%] text-black gap-8"
         >
-          <div class="flex gap-2">
+          <div class="flex-1 xl:flex-none flex gap-2">
             <IconBus color="rgb(239, 74, 74)" />
             <a
               class="gradient-bg font-semibold text-xl dark:text-white"
               href="/">TransmiIA</a
             >
           </div>
-          <div class="w-[8vw]"><TransMilenioLogo /></div>
-          <p onclick="changeTheme()" class="cursor-pointer text-white">
+          <div class="flex-1 xl:flex-none xl:w-[8vw]"><TransMilenioLogo /></div>
+          <p
+            onclick="changeTheme()"
+            class="flex-1 xl:flex-none flex justify-center xl:justify-end cursor-pointer text-black dark:text-white xl:text-white"
+          >
             {
               themeCookie == "dark" ? (
                 <IconSun size={30} />
@@ -122,18 +125,20 @@ const themeCookie = Astro.cookies.get("theme")?.value ?? "light";
           );
         }
 
-        .waves-bg {
-          background-image: url("/bg.svg");
-          background-size: 88%;
-          background-repeat: no-repeat;
-          background-position: right center;
-        }
+        @media (min-width: 1280px) {
+          .waves-bg {
+            background-image: url("/bg.svg");
+            background-size: 88%;
+            background-repeat: no-repeat;
+            background-position: right center;
+          }
 
-        .dark .waves-bg {
-          background-image: url("/bg-dark.svg");
-          background-size: 88%;
-          background-repeat: no-repeat;
-          background-position: right center;
+          .dark .waves-bg {
+            background-image: url("/bg-dark.svg");
+            background-size: 88%;
+            background-repeat: no-repeat;
+            background-position: right center;
+          }
         }
 
         .gradient-bg {
