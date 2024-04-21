@@ -1,135 +1,185 @@
 ---
-import TransMilenioLogo from "../../assets/logos/TransMilenio_logo.astro";
+// import TransMilenioLogo from "../../assets/logos/TransMilenio_logo.astro";
+import TransMilenioLogo from "../../assets/transmi.png";
+import TransMilenioLogoRojo from "../../assets/transmi-rojo.png";
+import DibujoCamara from "../../assets/dibujo-camara.png";
+import Medidas from "../../assets/medidas.png";
+import Dias100 from "../../assets/100dias.png";
+import Diagrama from "../../assets/Diagrama.png";
+import TransmiFooter from "../../assets/TransmiFooter.png";
 import Base from "../layouts/Base.astro";
 
-import IMGBusDrawing from "../../assets/bus-ia-draw.png";
-import {
-  IconBrain,
-  IconBrandGithub,
-  IconCarCrash,
-  IconMapPins,
-  IconVideo,
-} from "@tabler/icons-react";
+import Icon1 from "../../assets/icons/Icon-1.png";
+import Icon2 from "../../assets/icons/Icon-2.png";
+import Icon3 from "../../assets/icons/Icon-3.png";
+import Icon4 from "../../assets/icons/Icon-4.png";
+import Icon5 from "../../assets/icons/Icon-5.png";
+
 ---
 
 <Base>
-  <div class="flex flex-col h-screen pt-20 waves-bg">
-    <div class="flex flex-col gap-8 h-[90%] justify-center w-[90%] mx-auto">
-      <h2 class="gradient-bg text-5xl font-semibold xl:w-[40%]">
-        Haciendo Transmilenio mejor con Procesamiento de Imagenes
+  <nav class="flex flex-col">
+    <div class="absolute h-[16vh] p-4 pb-0 px-14">
+      <img class="h-full" src={TransMilenioLogo.src} />
+    </div>
+    <div
+      class="flex justify-between bg-[#E34343] p-4 pl-[20rem] pr-[5rem] text-white font-semibold"
+    >
+      <p class="text-shadow">INICIO</p>
+      <p class="text-shadow">SERVICIO AL CLIENTE</p>
+      <p class="text-shadow">¿DÓNDE NOS UBICAMOS?</p>
+      <p class="text-shadow">CÁMARAS TRANSMILENIO</p>
+      <p class="text-shadow">NOTICIAS</p>
+      <p class="text-shadow">TRANSMILENIO S.A</p>
+    </div>
+    <div class="bg-[#F1DE78] h-2"></div>
+    <div class="bg-[#181818] h-5"></div>
+  </nav>
+
+  <main class="flex flex-col pt-[14vh] w-screen overflow-x-hidden">
+    <div class="px-20 h-[60vh]">
+      <h2 class="font-semibold text-2xl text-shadow-sm">
+        PROTOCOLO CÁMARAS DE SEGURIDAD
       </h2>
 
-      <p class="xl:w-[40%] text-xl leading-10">
-        Proponemos mejorar el sistema de camaras de <span>Transmilenio</span> para
-        procesamiento de imagenes, de tal forma encontrar patrones de inseguridad
-        y alertar a las autoridades.
-      </p>
-
-      <div class="mt-[3rem] mx-auto xl:mx-0">
-        <a
-          class="px-8 p-3 text-2xl rounded-full bg-grad text-white font-semibold cursor-pointer"
-          href="#cont-main">Leer Más...</a
+      <div class="flex gap-12 text-xl p-6 bg-[#EDEDED]">
+        <div
+          class="flex flex-col gap-4 items-center justify-center flex-1 aspect-square"
         >
+          <img
+            class="aspect-square w-[50%] object-contain"
+            src={Icon1.src}
+            alt=""
+          />
+          <p class="font-semibold text-center">
+            Recopilación por IA imagenes de alerta
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-4 items-center justify-center flex-1 aspect-square"
+        >
+          <img
+            class="aspect-square w-[50%] object-contain"
+            src={Icon2.src}
+            alt=""
+          />
+          <p class="font-semibold text-center">Seguimiento de ubicación</p>
+        </div>
+        <div
+          class="flex flex-col gap-4 items-center justify-center flex-1 aspect-square"
+        >
+          <img
+            class="aspect-square w-[50%] object-contain"
+            src={Icon3.src}
+            alt=""
+          />
+          <p class="font-semibold text-center">La notificación es enviada</p>
+        </div>
+        <div
+          class="flex flex-col gap-4 items-center justify-center flex-1 aspect-square"
+        >
+          <img
+            class="aspect-square w-[50%] object-contain"
+            src={Icon4.src}
+            alt=""
+          />
+          <p class="font-semibold text-center">
+            Figuras de autoridad alertadas
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-4 items-center justify-center flex-1 aspect-square"
+        >
+          <img
+            class="aspect-square w-[50%] object-contain"
+            src={Icon5.src}
+            alt=""
+          />
+          <p class="font-semibold text-center">
+            Se hace el proseso de detención
+          </p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div
-    class="w-[90%] mx-auto bg-grad p-1 xl:p-2 rounded-full text-white font-semibold text-xl text-center"
-  >
-  </div>
-
-  <div class="mx-auto w-[90%] xl:w-[80%] rounded-[5rem]" id="cont-main">
-    <div class="flex flex-col xl:w-full items-center gap-12 px-8">
-      <img
-        class="w-[80%] xl:w-[40%] -scale-x-100"
-        src={IMGBusDrawing.src}
-        alt=""
-      />
-      <p class="text-xl font-semibold">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam eius
-        voluptatibus dolorum, neque aspernatur, veniam maxime amet non nemo
-        adipisci sequi expedita earum ullam libero accusantium. Animi sed fugit
-        officiis aspernatur itaque labore nisi exercitationem ut aliquid libero,
-        quos ratione veritatis, architecto autem rem quidem sequi odio molestias
-        unde totam?
-      </p>
-    </div>
-  </div>
-
-  <div class="mx-auto w-[80%] py-8 mt-[15vw] xl:mt-0">
-    <h2 class="text-4xl font-semibold">Pero... ¿Como Funciona?</h2>
-
-    <div class="flex flex-col xl:flex-row gap-[10%] items-center">
-      <span
-        class="order-1 xl:order-1 flex items-center gap-4 text-[20vh] gradient-bg"
+    <div class="relative flex flex-col h-[70rem]">
+      <div class="absolute bg-[#181818] h-6 rotate-[1.5deg] w-[105vw] -left-16">
+      </div>
+      <div
+        class="absolute bg-[#F1D378] h-4 rotate-[1.5deg] w-[105vw] -left-16 top-[1.5rem]"
       >
-        <IconMapPins size={150} />
-        1.
-      </span>
-
-      <p class="text-2xl order-1 xl:order-2">
-        Se capturarán datos cruciales de cada bus de TransMilenio para análisis
-        IA, como la ubicación, velocidad, ocupación y tiempo de parada,
-        optimizando así la detección de inseguridad.
-      </p>
-    </div>
-    <div class="flex flex-col xl:flex-row gap-[10%] items-center">
-      <p class="text-2xl order-2 xl:order-1">
-        Las grabaciones en tiempo real de cada bus de TransMilenio se reenviarán
-        para procesamiento de imágenes, mejorando la seguridad. Se analizarán
-        para detectar comportamientos sospechosos o incidentes, permitiendo
-        respuestas rápidas y eficaces.
-      </p>
-      <span
-        class="order-1 xl:order-2 flex items-center gap-4 text-[20vh] gradient-bg"
+      </div>
+      <div
+        class="absolute bg-[#E34343] h-[60rem] rotate-[1.5deg] w-[105vw] -left-16 top-[2.5rem] px-[5vw]"
       >
-        2.
-        <IconVideo size={150} />
-      </span>
-    </div>
-    <div class="flex flex-col xl:flex-row gap-[10%] items-center">
-      <span
-        class="order-1 xl:order-1 flex items-center gap-4 text-[20vh] gradient-bg"
+        <div class="relative rotate-[-1.5deg] h-[95%]">
+          <img class="absolute w-[15rem]" src={TransMilenioLogoRojo.src} />
+          <div class="absolute z-10 bottom-0">
+            <img class="w-[55%]" src={DibujoCamara.src} />
+          </div>
+          <div
+            class="flex flex-col absolute w-full h-full justify-center py-20 ml-20"
+          >
+            <p class="font-semibold text-6xl text-white text-center">
+              ENTERATE DE NUESTRO PROTOTIPO
+            </p>
+            <div
+              class="flex items-center justify-center h-full w-[50%] ml-auto p-8 pr-12"
+            >
+              <div
+                class="flex flex-col justify-around bg-white rounded-md h-[90%] w-full p-8"
+              >
+                <h2 class="text-center font-semibold text-5xl">MATERIALES</h2>
+                <div class="h-[2px] w-full bg-black"></div>
+                <ul
+                  class="list-disc list-inside text-3xl font-semibold mx-[2rem]"
+                >
+                  <li>1 Lente</li>
+                  <li>1 Sensor de imágen</li>
+                  <li>1 Procesador de video</li>
+                  <li>1 Carcasa</li>
+                  <li>1 Fuente de alimentación</li>
+                  <li>Plástico</li>
+                  <li>Metal</li>
+                  <li>Vidrio</li>
+                </ul>
+                <div class="h-[2px] w-full bg-black"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute bg-[#F1D378] h-4 rotate-[1.5deg] w-[105vw] -left-16 top-[62.5rem]"
       >
-        <IconBrain size={150} />
-        3.
-      </span>
+      </div>
+      <div
+        class="absolute bg-[#181818] h-6 rotate-[1.5deg] w-[105vw] -left-16 top-[63.5rem]"
+      >
+      </div>
+    </div>
 
-      <p class="text-2xl order-1 xl:order-2">
-        El modelo analizará las grabaciones de los buses de TransMilenio y
-        determinará su importancia. Solo se guardarán aquellas que muestren
-        eventos relevantes o situaciones de seguridad, descartando las demás
-        para optimizar el almacenamiento y el procesamiento de datos.
+    <div class="flex bg-[#D9D9D9] mr-auto items-center">
+      <div class="h-20 aspect-square bg-[#E34343]"></div>
+      <p class="px-8 text-2xl font-semibold text-shadow-sm">
+        MEDIDAS ESPECÍFICAS
       </p>
     </div>
-    <div class="flex flex-col xl:flex-row gap-[10%] items-center">
-      <p class="text-2xl order-2 xl:order-1">
-        Con base en las grabaciones y los datos procesados por la IA, se tomarán
-        decisiones sobre si alertar a las autoridades. Si se detecta una
-        situación de seguridad o comportamiento sospechoso, se enviará una
-        alerta. De lo contrario, se conservará el video para uso posterior, como
-        evidencia en una posible denuncia.
-      </p>
-      <span
-        class="order-1 xl:order-2 flex items-center gap-4 text-[20vh] gradient-bg"
-      >
-        4.
-        <IconCarCrash size={150} />
-      </span>
-    </div>
-  </div>
 
-  <footer
-    class="flex flex-col gap-8 bg-grad p-12 items-center justify-center text-white"
-  >
-    <a
-      href="https://github.com/achalogy/pag-cdio"
-      target="_blank"
-      class="text-4xl font-semibold">Creado por Acha</a
+    <img src={Medidas.src} alt="" class="w-full my-8" />
+    <img src={Dias100.src} alt="" class="w-[80%] mx-auto my-12" />
+
+    <h3
+      class="text-[#FF4545] text-center font-semibold text-5xl text-shadow-sm"
     >
-    <a href="https://github.com/achalogy/pag-cdio" target="_blank"
-      ><IconBrandGithub size={35} /></a
-    >
-  </footer>
+      ¿Y CÓMO FUNCIONA POR DENTRO?
+    </h3>
+    <div class="w-[90%] bg-black p-3 px-8 text-center mx-auto my-8">
+      <p class="text-3xl font-semibold text-white">DIAGRAMA DE FLUJO</p>
+    </div>
+    
+    <img src={Diagrama.src} class="w-[90%] mx-auto" alt="">
+
+    <img src={TransmiFooter.src} class="mt-12 w-full ">
+  </main>
 </Base>

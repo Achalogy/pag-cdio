@@ -1,0 +1,135 @@
+---
+import TransMilenioLogo from "../../assets/logos/TransMilenio_logo.astro";
+import Base from "../layouts/Base.astro";
+
+import IMGBusDrawing from "../../assets/bus-ia-draw.png";
+import {
+  IconBrain,
+  IconBrandGithub,
+  IconCarCrash,
+  IconMapPins,
+  IconVideo,
+} from "@tabler/icons-react";
+---
+
+<Base>
+  <div class="flex flex-col h-screen pt-20 waves-bg">
+    <div class="flex flex-col gap-8 h-[90%] justify-center w-[90%] mx-auto">
+      <h2 class="gradient-bg text-5xl font-semibold xl:w-[40%]">
+        Haciendo Transmilenio mejor con Procesamiento de Imagenes
+      </h2>
+
+      <p class="xl:w-[40%] text-xl leading-10">
+        Proponemos mejorar el sistema de camaras de <span>Transmilenio</span> para
+        procesamiento de imagenes, de tal forma encontrar patrones de inseguridad
+        y alertar a las autoridades.
+      </p>
+
+      <div class="mt-[3rem] mx-auto xl:mx-0">
+        <a
+          class="px-8 p-3 text-2xl rounded-full bg-grad text-white font-semibold cursor-pointer"
+          href="#cont-main">Leer Más...</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="w-[90%] mx-auto bg-grad p-1 xl:p-2 rounded-full text-white font-semibold text-xl text-center"
+  >
+  </div>
+
+  <div class="mx-auto w-[90%] xl:w-[80%] rounded-[5rem]" id="cont-main">
+    <div class="flex flex-col xl:w-full items-center gap-12 px-8">
+      <img
+        class="w-[80%] xl:w-[40%] -scale-x-100"
+        src={IMGBusDrawing.src}
+        alt=""
+      />
+      <p class="text-xl font-semibold">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam eius
+        voluptatibus dolorum, neque aspernatur, veniam maxime amet non nemo
+        adipisci sequi expedita earum ullam libero accusantium. Animi sed fugit
+        officiis aspernatur itaque labore nisi exercitationem ut aliquid libero,
+        quos ratione veritatis, architecto autem rem quidem sequi odio molestias
+        unde totam?
+      </p>
+    </div>
+  </div>
+
+  <div class="mx-auto w-[80%] py-8 mt-[15vw] xl:mt-0">
+    <h2 class="text-4xl font-semibold">Pero... ¿Como Funciona?</h2>
+
+    <div class="flex flex-col xl:flex-row gap-[10%] items-center">
+      <span
+        class="order-1 xl:order-1 flex items-center gap-4 text-[20vh] gradient-bg"
+      >
+        <IconMapPins size={150} />
+        1.
+      </span>
+
+      <p class="text-2xl order-1 xl:order-2">
+        Se capturarán datos cruciales de cada bus de TransMilenio para análisis
+        IA, como la ubicación, velocidad, ocupación y tiempo de parada,
+        optimizando así la detección de inseguridad.
+      </p>
+    </div>
+    <div class="flex flex-col xl:flex-row gap-[10%] items-center">
+      <p class="text-2xl order-2 xl:order-1">
+        Las grabaciones en tiempo real de cada bus de TransMilenio se reenviarán
+        para procesamiento de imágenes, mejorando la seguridad. Se analizarán
+        para detectar comportamientos sospechosos o incidentes, permitiendo
+        respuestas rápidas y eficaces.
+      </p>
+      <span
+        class="order-1 xl:order-2 flex items-center gap-4 text-[20vh] gradient-bg"
+      >
+        2.
+        <IconVideo size={150} />
+      </span>
+    </div>
+    <div class="flex flex-col xl:flex-row gap-[10%] items-center">
+      <span
+        class="order-1 xl:order-1 flex items-center gap-4 text-[20vh] gradient-bg"
+      >
+        <IconBrain size={150} />
+        3.
+      </span>
+
+      <p class="text-2xl order-1 xl:order-2">
+        El modelo analizará las grabaciones de los buses de TransMilenio y
+        determinará su importancia. Solo se guardarán aquellas que muestren
+        eventos relevantes o situaciones de seguridad, descartando las demás
+        para optimizar el almacenamiento y el procesamiento de datos.
+      </p>
+    </div>
+    <div class="flex flex-col xl:flex-row gap-[10%] items-center">
+      <p class="text-2xl order-2 xl:order-1">
+        Con base en las grabaciones y los datos procesados por la IA, se tomarán
+        decisiones sobre si alertar a las autoridades. Si se detecta una
+        situación de seguridad o comportamiento sospechoso, se enviará una
+        alerta. De lo contrario, se conservará el video para uso posterior, como
+        evidencia en una posible denuncia.
+      </p>
+      <span
+        class="order-1 xl:order-2 flex items-center gap-4 text-[20vh] gradient-bg"
+      >
+        4.
+        <IconCarCrash size={150} />
+      </span>
+    </div>
+  </div>
+
+  <footer
+    class="flex flex-col gap-8 bg-grad p-12 items-center justify-center text-white"
+  >
+    <a
+      href="https://github.com/achalogy/pag-cdio"
+      target="_blank"
+      class="text-4xl font-semibold">Creado por Acha</a
+    >
+    <a href="https://github.com/achalogy/pag-cdio" target="_blank"
+      ><IconBrandGithub size={35} /></a
+    >
+  </footer>
+</Base>

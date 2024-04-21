@@ -47,7 +47,7 @@ const themeCookie = Astro.cookies.get("theme")?.value ?? "light";
             window.location.reload();
           }
         </script>
-        <div
+        <!-- <div
           class="absolute w-full top-0 left-0 select-none h-20 items-center flex justify-between px-[5%] text-black gap-8"
         >
           <div class="flex-1 xl:flex-none flex gap-2">
@@ -70,7 +70,7 @@ const themeCookie = Astro.cookies.get("theme")?.value ?? "light";
               )
             }
           </p>
-        </div>
+        </div> -->
         <slot />
       </div>
 
