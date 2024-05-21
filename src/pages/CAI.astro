@@ -10,7 +10,7 @@ import Timeline from "../../assets/final/timeline.png";
       setInterval(async () => {
         const lista = await (await fetch("/api/get")).json();
         const date = new Date().getTime();
-        const encontrado = lista.list.find((x) => date - x.date < 1000 * 2);
+        const encontrado = lista.list.find((x) => date - x.date < 1000 * 4);
 
         const eL = document.getElementById("lista-buses");
 
@@ -31,8 +31,9 @@ import Timeline from "../../assets/final/timeline.png";
             <p class="text-xs">Llega en X minutos</p>
           </div>
           <div>
-            <img src=${Timeline.src} alt="" />
+            <img src=${Timeline.src} class="mx-auto" alt="" />
           </div>
+          <p>${date - x.date}</p>
         </div>`
         );
 
