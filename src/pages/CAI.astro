@@ -10,7 +10,7 @@ import Timeline from "../../assets/final/timeline.png";
       setInterval(async () => {
         const lista = await (await fetch("/api/get")).json();
         const date = new Date().getTime();
-        const encontrado = lista.list.find((x) => date - x.date < 1000 * 2.5);
+        // const encontrado = lista.list.find((x) => date - x.date < 1000 * 2.5);
 
         const eL = document.getElementById("lista-buses");
 
@@ -39,11 +39,11 @@ import Timeline from "../../assets/final/timeline.png";
 
         eL.innerHTML = inner;
 
-        if (encontrado) {
-          let etiquetaAudio = document.createElement("audio");
-          etiquetaAudio.setAttribute("src", "/notification.mp3");
-          etiquetaAudio.play();
-        }
+        // if (encontrado) {
+        //   let etiquetaAudio = document.createElement("audio");
+        //   etiquetaAudio.setAttribute("src", "/notification.mp3");
+        //   etiquetaAudio.play();
+        // }
       }, 1500);
     });
   </script>
@@ -57,6 +57,11 @@ import Timeline from "../../assets/final/timeline.png";
       </p>
       <IconBell size={30} />
     </nav>
+
+    <p class="w-[90%] text-center text-xs text-slate-800">
+      Por las restricciones de los navegadores moviles, no es posible reproducir
+      un audio :(
+    </p>
 
     <main class="flex flex-col gap-2 p-4 h-full flex-1">
       <p class="font-semibold">Estación Actual:</p>
