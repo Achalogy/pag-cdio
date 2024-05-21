@@ -1,0 +1,77 @@
+---
+import Base from "../layouts/Base.astro";
+import { IconBus, IconBell } from "@tabler/icons-react";
+import Timeline from "../../assets/final/timeline.png";
+---
+
+<Base>
+  <script define:vars={{ Timeline }}>
+    document.addEventListener("astro:page-load", async () => {
+      setInterval(async () => {
+        const lista = await (await fetch("/api/get")).json();
+        const date = new Date().getTime();
+        const encontrado = lista.list.find((x) => date - x.date < 1000 * 2);
+
+        const eL = document.getElementById("lista-buses");
+
+        const inner = lista.list?.map(
+          (x) => `<div
+          class="flex flex-col bg-white rounded-md border border-slate-300 p-4 gap-3"
+        >
+          <div class="flex gap-4 justify-between items-center">
+            <div class="flex gap-2 items-center">
+              <div
+                style=background-color:${x.alert ? "#f87171" : "#4ade80"}
+                class="font-bold p-1 px-6 rounded-md"
+              >
+                <p class="text-md">${x.num}</p>
+              </div>
+              <p class="text-md">${x.name}</p>
+            </div>
+            <p class="text-xs">Llega en X minutos</p>
+          </div>
+          <div>
+            <img src=${Timeline.src} alt="" />
+          </div>
+        </div>`
+        );
+
+        eL.innerHTML = inner;
+
+        if (encontrado) {
+          let etiquetaAudio = document.createElement("audio");
+          etiquetaAudio.setAttribute("src", "/notification.mp3");
+          etiquetaAudio.play();
+        }
+      }, 1500);
+    });
+  </script>
+  <div class="flex flex-col max-h-screen h-screen">
+    <nav class="flex justify-between items-center p-4 px-6">
+      <p class="flex gap-2 items-center text-3xl font-semibold text-red-500">
+        <IconBus size={35} />
+        <b class="flex"
+          >Transmi <span class="font-semibold text-orange-300">IA</span></b
+        >
+      </p>
+      <IconBell size={30} />
+    </nav>
+
+    <main class="flex flex-col gap-2 p-4 h-full flex-1">
+      <p class="font-semibold">Estación Actual:</p>
+      <div class="bg-slate-200 p-6 w-full mx-auto rounded-md">
+        <input
+          type="text"
+          class="w-full bg-transparent font-semibold text-xl"
+          value="Calle 45 - American SchoolWay"
+        />
+      </div>
+
+      <div class="border border-slate-200 w-full h-[1px] my-6"></div>
+
+      <p class="font-semibold">Proximos buses:</p>
+
+      <div id="lista-buses" class="w-full flex-1 overflow-scroll"></div>
+    </main>
+  </div>
+</Base>
