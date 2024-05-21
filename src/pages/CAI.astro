@@ -7,10 +7,10 @@ import Timeline from "../../assets/final/timeline.png";
 <Base>
   <script define:vars={{ Timeline }}>
     document.addEventListener("astro:page-load", async () => {
-      setInterval(async () => {
+      const ejecucion = async () => {
         const lista = await (await fetch("/api/get")).json();
         const date = new Date().getTime();
-        // const encontrado = lista.list.find((x) => date - x.date < 1000 * 2.5);
+        const encontrado = lista.list.find((x) => date - x.date < 1000 * 2.5);
 
         const eL = document.getElementById("lista-buses");
 
@@ -42,11 +42,15 @@ import Timeline from "../../assets/final/timeline.png";
 
         eL.innerHTML = inner;
 
-        // if (encontrado) {
-        //   let etiquetaAudio = document.createElement("audio");
-        //   etiquetaAudio.setAttribute("src", "/notification.mp3");
-        //   etiquetaAudio.play();
-        // }
+        if (encontrado) {
+          let etiquetaAudio = document.createElement("audio");
+          etiquetaAudio.setAttribute("src", "/notification.mp3");
+          etiquetaAudio.play();
+        }
+      }
+      ejecucion()
+      setInterval(async () => {
+        ejecucion()
       }, 1500);
     });
   </script>
