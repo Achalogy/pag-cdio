@@ -12,7 +12,7 @@ import Icon2 from "../../assets/icons/Icon-2.png";
 import Icon3 from "../../assets/icons/Icon-3.png";
 import Icon4 from "../../assets/icons/Icon-4.png";
 import Icon5 from "../../assets/icons/Icon-5.png";
-import { IconSettings } from "@tabler/icons-react";
+import { IconBrain, IconSettings } from "@tabler/icons-react";
 ---
 
 <Base>
@@ -33,11 +33,13 @@ import { IconSettings } from "@tabler/icons-react";
 
   <main class="flex flex-col pt-8 xl:pt-[14vh] w-screen xl:overflow-x-hidden">
     <div class="px-12 xl:px-20 xl:h-[60vh]">
-      <h2 class="font-semibold text-2xl text-shadow-sm">
+      <h2 class="font-semibold text-2xl mb-6 text-shadow-sm">
         PROTOCOLO CÁMARAS DE SEGURIDAD
       </h2>
 
-      <div class="flex flex-col xl:flex-row gap-12 text-xl p-6 bg-[#EDEDED]">
+      <div
+        class="grid grid-cols-2 xl:flex xl:flex-row gap-12 text-xl p-6 bg-[#EDEDED]"
+      >
         <div
           class="flex flex-col gap-4 items-center justify-center flex-1 aspect-square"
         >
@@ -58,7 +60,18 @@ import { IconSettings } from "@tabler/icons-react";
             src={Icon2.src}
             alt=""
           />
-          <p class="font-semibold text-center">Seguimiento de ubicación</p>
+          <p class="font-semibold text-center">Seguimiento del bus</p>
+        </div>
+        <div
+          class="flex flex-col gap-4 items-center justify-center flex-1 aspect-square"
+        >
+          <div class="flex xl:hidden">
+            <IconBrain size={60} stroke={1} />
+          </div>
+          <div class="hidden xl:flex">
+            <IconBrain size={100} stroke={1} />
+          </div>
+          <p class="font-semibold text-center">Es procesado por la IA</p>
         </div>
         <div
           class="flex flex-col gap-4 items-center justify-center flex-1 aspect-square"
