@@ -1,6 +1,6 @@
 
-import initDB from '@/src/comps/initDB';
-import Notifications from '@/src/models/Notifications';
+import initDB from '../../comps/initDB';
+import Notifications from '../../models/Notifications';
 import type { APIRoute } from 'astro';
 
 export const POST: APIRoute = async ({ request, params }) => {
