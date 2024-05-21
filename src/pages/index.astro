@@ -1,11 +1,7 @@
 ---
 // import TransMilenioLogo from "../../assets/logos/TransMilenio_logo.astro";
 import TransMilenioLogo from "../../assets/transmi.png";
-import TransMilenioLogoRojo from "../../assets/transmi-rojo.png";
-import DibujoCamara from "../../assets/dibujo-camara.png";
-import Medidas from "../../assets/medidas.png";
-import Dias100 from "../../assets/100dias.png";
-import Diagrama from "../../assets/Diagrama.png";
+import Diagrama from "../../assets/final/diagrama.png";
 import TransmiFooter from "../../assets/TransmiFooter.png";
 import Base from "../layouts/Base.astro";
 
@@ -14,35 +10,29 @@ import Icon2 from "../../assets/icons/Icon-2.png";
 import Icon3 from "../../assets/icons/Icon-3.png";
 import Icon4 from "../../assets/icons/Icon-4.png";
 import Icon5 from "../../assets/icons/Icon-5.png";
-
 ---
 
 <Base>
   <nav class="flex flex-col">
-    <div class="absolute h-[16vh] p-4 pb-0 px-14">
+    <div class="hidden xl:flex absolute h-[16vh] p-4 pb-0 px-14">
       <img class="h-full" src={TransMilenioLogo.src} />
     </div>
     <div
-      class="flex justify-between bg-[#E34343] p-4 pl-[20rem] pr-[5rem] text-white font-semibold"
+      class="flex justify-between bg-[#E34343] p-4 xl:pl-[20rem] pr-[5rem] text-white font-semibold"
     >
       <p class="text-shadow">INICIO</p>
-      <p class="text-shadow">SERVICIO AL CLIENTE</p>
-      <p class="text-shadow">¿DÓNDE NOS UBICAMOS?</p>
-      <p class="text-shadow">CÁMARAS TRANSMILENIO</p>
-      <p class="text-shadow">NOTICIAS</p>
-      <p class="text-shadow">TRANSMILENIO S.A</p>
     </div>
     <div class="bg-[#F1DE78] h-2"></div>
     <div class="bg-[#181818] h-5"></div>
   </nav>
 
-  <main class="flex flex-col pt-[14vh] w-screen overflow-x-hidden">
-    <div class="px-20 h-[60vh]">
+  <main class="flex flex-col pt-8 xl:pt-[14vh] w-screen xl:overflow-x-hidden">
+    <div class="px-12 xl:px-20 xl:h-[60vh]">
       <h2 class="font-semibold text-2xl text-shadow-sm">
         PROTOCOLO CÁMARAS DE SEGURIDAD
       </h2>
 
-      <div class="flex gap-12 text-xl p-6 bg-[#EDEDED]">
+      <div class="flex flex-col xl:flex-row gap-12 text-xl p-6 bg-[#EDEDED]">
         <div
           class="flex flex-col gap-4 items-center justify-center flex-1 aspect-square"
         >
@@ -102,84 +92,87 @@ import Icon5 from "../../assets/icons/Icon-5.png";
       </div>
     </div>
 
-    <div class="relative flex flex-col h-[70rem]">
-      <div class="absolute bg-[#181818] h-6 rotate-[1.5deg] w-[105vw] -left-16">
-      </div>
-      <div
-        class="absolute bg-[#F1D378] h-4 rotate-[1.5deg] w-[105vw] -left-16 top-[1.5rem]"
-      >
-      </div>
-      <div
-        class="absolute bg-[#E34343] h-[60rem] rotate-[1.5deg] w-[105vw] -left-16 top-[2.5rem] px-[5vw]"
-      >
-        <div class="relative rotate-[-1.5deg] h-[95%]">
-          <img class="absolute w-[15rem]" src={TransMilenioLogoRojo.src} />
-          <div class="absolute z-10 bottom-0">
-            <img class="w-[55%]" src={DibujoCamara.src} />
-          </div>
-          <div
-            class="flex flex-col absolute w-full h-full justify-center py-20 ml-20"
-          >
-            <p class="font-semibold text-6xl text-white text-center">
-              ENTERATE DE NUESTRO PROTOTIPO
-            </p>
-            <div
-              class="flex items-center justify-center h-full w-[50%] ml-auto p-8 pr-12"
-            >
-              <div
-                class="flex flex-col justify-around bg-white rounded-md h-[90%] w-full p-8"
-              >
-                <h2 class="text-center font-semibold text-5xl">MATERIALES</h2>
-                <div class="h-[2px] w-full bg-black"></div>
-                <ul
-                  class="list-disc list-inside text-3xl font-semibold mx-[2rem]"
-                >
-                  <li>1 Lente</li>
-                  <li>1 Sensor de imágen</li>
-                  <li>1 Procesador de video</li>
-                  <li>1 Carcasa</li>
-                  <li>1 Fuente de alimentación</li>
-                  <li>Plástico</li>
-                  <li>Metal</li>
-                  <li>Vidrio</li>
-                </ul>
-                <div class="h-[2px] w-full bg-black"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="absolute bg-[#F1D378] h-4 rotate-[1.5deg] w-[105vw] -left-16 top-[62.5rem]"
-      >
-      </div>
-      <div
-        class="absolute bg-[#181818] h-6 rotate-[1.5deg] w-[105vw] -left-16 top-[63.5rem]"
-      >
-      </div>
-    </div>
+    <div
+      class="w-[90%] xl:w-2/3 text-xl xl:text-3xl flex flex-col gap-6 mx-auto"
+    >
+      <p>
+        Se usarán cámaras con capacidad de grabación en calidad 720p 30fps con
+        un bajo bitrate para reducir el uso de la red. Estas usarán un protocolo
+        llamado RTSP que transmitirá los videos en la red local de cada bus.
+        Esta red local será administrada por un router, encargado de redirigir
+        estos paquetes a través de internet a un servidor.
+      </p>
 
-    <div class="flex bg-[#D9D9D9] mr-auto items-center">
-      <div class="h-20 aspect-square bg-[#E34343]"></div>
-      <p class="px-8 text-2xl font-semibold text-shadow-sm">
-        MEDIDAS ESPECÍFICAS
+      <p>
+        Cada bus contará con una conexión satelital a internet, esto nos
+        permitirá reducir problemas a la hora de transmitir los datos, esta
+        conexión a pesar de no tener buena latencia, nos permite enviar los
+        vídeos sin problema.
+      </p>
+
+      <p>
+        Por cada bus usaremos dos cámaras por vagón, esto nos permitirá ser más
+        flexibles con el tamaño, ya que los buses troncales no tienen la misma
+        cantidad de vagones que los híbridos.
+      </p>
+
+      <img src={Diagrama.src} class="w-[90%] xl:w-2/3 mx-auto" />
+
+      <p>
+        El servidor recibirá esta información y usando muestreo aleatorio se
+        elegirá qué videos pasarán por el modelo de IA, los paquetes enviados
+        por RTSP se espera tengan un tamaño de 5 segundos, se recopilarán
+        paquetes más grandes de 20 segundos. Antes de pasar al modelo, cada
+        video pasará por una etapa de preprocesado, reducirá calidad y se
+        preparará para ser revisado por el modelo.
+      </p>
+
+      <p>
+        El modelo de IA usará un modelo que se centrará en un modelo con
+        arquitectura llamada Inception V3 que usando videos con una resolución
+        de 300x300 pixeles tiene un porcentaje de exactitud de 99.15%
+      </p>
+
+      
+
+      <p>
+        Estos videos se clasificaron en base al resultado del modelo, en 3
+        casos:
+      </p>
+
+      <ol class="w-2/3 mx-auto">
+        <li>
+          <b>Vídeo sin eventos importantes:</b> estos videos simplemente se desechará.
+        </li>
+        <li>
+          <b>Vídeo con evento leve:</b> ya que es probable que no este ocurriendo
+          nada, estos videos simplemente se guardarán en un NAS por una semana, por
+          si es requerido para una denuncia o casos similares.
+        </li>
+        <li>
+          <b>Video con evento:</b> estos videos disparará una alerta al CAI y la
+          estación más cercana, además de guardar el video en el NAS.
+        </li>
+      </ol>
+
+      <p>
+        Se usarán imágenes tomadas de al menos 30 buses troncales, sitp o
+        híbridos, un total de al menos 80 horas, un alrededor de 8 '640.000 de
+        frames separados en paquetes de 20 segundos. De estas 80 horas se busca
+        que al menos un 25% sean videos/imágenes en los que están ocurriendo
+        casos de violencia o robo.
+      </p>
+
+      <p>
+        Se pondrá a disposición de los agentes de policía en los CAI cercanos a
+        las estaciones y ubicaciones cercanas a estaciones de bus, una
+        aplicación móvil que enviará notificaciones push en caso de requerir
+        presencia en un bus o estación. Esta App Mostrará información importante
+        de cada bus, como sus próximas paradas y en cuánto tiempo llegará a la
+        próxima estación.
       </p>
     </div>
 
-    <img src={Medidas.src} alt="" class="w-full my-8" />
-    <img src={Dias100.src} alt="" class="w-[80%] mx-auto my-12" />
-
-    <h3
-      class="text-[#FF4545] text-center font-semibold text-5xl text-shadow-sm"
-    >
-      ¿Y CÓMO FUNCIONA POR DENTRO?
-    </h3>
-    <div class="w-[90%] bg-black p-3 px-8 text-center mx-auto my-8">
-      <p class="text-3xl font-semibold text-white">DIAGRAMA DE FLUJO</p>
-    </div>
-    
-    <img src={Diagrama.src} class="w-[90%] mx-auto" alt="">
-
-    <img src={TransmiFooter.src} class="mt-12 w-full ">
+    <img src={TransmiFooter.src} class="mt-12 w-full" />
   </main>
 </Base>
