@@ -2,6 +2,8 @@
 // import TransMilenioLogo from "../../assets/logos/TransMilenio_logo.astro";
 import TransMilenioLogo from "../../assets/transmi.png";
 import Diagrama from "../../assets/final/diagrama.png";
+import Tabla from "../../assets/final/tabla.png";
+import Camaras from "../../assets/final/camaras.png";
 import TransmiFooter from "../../assets/TransmiFooter.png";
 import Base from "../layouts/Base.astro";
 
@@ -95,6 +97,7 @@ import Icon5 from "../../assets/icons/Icon-5.png";
     <div
       class="w-[90%] xl:w-2/3 text-xl xl:text-3xl flex flex-col gap-6 mx-auto"
     >
+      <h2 class="text-3xl font-semibold">Sistema de vigilancia</h2>
       <p>
         Se usarán cámaras con capacidad de grabación en calidad 720p 30fps con
         un bajo bitrate para reducir el uso de la red. Estas usarán un protocolo
@@ -116,8 +119,17 @@ import Icon5 from "../../assets/icons/Icon-5.png";
         cantidad de vagones que los híbridos.
       </p>
 
-      <img src={Diagrama.src} class="w-[90%] xl:w-2/3 mx-auto" />
+      <img
+        src={Diagrama.src}
+        class="w-[90%] xl:w-2/3 mx-auto"
+        title="Fig 1. Forma en que se transmitirán los datos al servidor"
+      />
 
+      <p class="text-xs text-center w-full text-slate-600">
+        Fig 1. Forma en que se transmitirán los datos al servidor
+      </p>
+
+      <h2 class="text-3xl font-semibold">Servidor y modelo Neuronal</h2>
       <p>
         El servidor recibirá esta información y usando muestreo aleatorio se
         elegirá qué videos pasarán por el modelo de IA, los paquetes enviados
@@ -133,14 +145,24 @@ import Icon5 from "../../assets/icons/Icon-5.png";
         de 300x300 pixeles tiene un porcentaje de exactitud de 99.15%
       </p>
 
-      
+      <img
+        src={Tabla.src}
+        class="w-[90%] xl:w-2/3 mx-auto"
+        title="Fig 2. Resultados tomados de Using Artificial Intelligence for Anomaly
+      Detection Using Security Cameras"
+      />
+
+      <p class="text-xs text-center w-full text-slate-600">
+        Fig 2. Resultados tomados de Using Artificial Intelligence for Anomaly
+        Detection Using Security Cameras
+      </p>
 
       <p>
         Estos videos se clasificaron en base al resultado del modelo, en 3
         casos:
       </p>
 
-      <ol class="w-2/3 mx-auto">
+      <ol class="w-[80%] xl:w-2/3 mx-auto">
         <li>
           <b>Vídeo sin eventos importantes:</b> estos videos simplemente se desechará.
         </li>
@@ -155,6 +177,7 @@ import Icon5 from "../../assets/icons/Icon-5.png";
         </li>
       </ol>
 
+      <h2 class="text-3xl font-semibold">Entrenamiento del modelo</h2>
       <p>
         Se usarán imágenes tomadas de al menos 30 buses troncales, sitp o
         híbridos, un total de al menos 80 horas, un alrededor de 8 '640.000 de
@@ -163,6 +186,18 @@ import Icon5 from "../../assets/icons/Icon-5.png";
         casos de violencia o robo.
       </p>
 
+      <img
+        src={Camaras.src}
+        class="w-[90%] xl:w-2/3 mx-auto"
+        title="Fig 2. Resultados tomados de Using Artificial Intelligence for Anomaly
+      Detection Using Security Cameras"
+      />
+
+      <p class="text-xs text-center w-full text-slate-600">
+        Fig 3. Camaras de seguridad de Transmilenio
+      </p>
+
+      <h2 class="text-3xl font-semibold">App para cai y uniformados</h2>
       <p>
         Se pondrá a disposición de los agentes de policía en los CAI cercanos a
         las estaciones y ubicaciones cercanas a estaciones de bus, una
