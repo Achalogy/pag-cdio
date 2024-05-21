@@ -14,7 +14,7 @@ import Timeline from "../../assets/final/timeline.png";
 
         const eL = document.getElementById("lista-buses");
 
-        const inner = lista.list?.map(
+        const inner = lista.list.reverse()?.map(
           (x) => `<div
           class="flex flex-col bg-white rounded-md border border-slate-300 p-4 gap-3"
         >
