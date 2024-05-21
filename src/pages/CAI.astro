@@ -10,7 +10,7 @@ import Timeline from "../../assets/final/timeline.png";
       setInterval(async () => {
         const lista = await (await fetch("/api/get")).json();
         const date = new Date().getTime();
-        const encontrado = lista.list.find((x) => date - x.date < 1000 * 4);
+        const encontrado = lista.list.find((x) => date - x.date < 1000 * 2.5);
 
         const eL = document.getElementById("lista-buses");
 
